@@ -1,4 +1,4 @@
-define("bui-toolbar/1.1.0/index-debug", ["bui-common/1.1.0/common-debug", "bui-toolbar/1.1.0/src/baritem-debug", "bui-toolbar/1.1.0/src/bar-debug", "bui-toolbar/1.1.0/src/pagingbar-debug", "bui-toolbar/1.1.0/src/numberpagingbar-debug"], function(require, exports, module) {
+define("bui-toolbar/1.1.0/index-debug", ["jquery/1.9.1/jquery-debug", "bui-common/1.1.0/common-debug", "bui-toolbar/1.1.0/src/baritem-debug", "bui-toolbar/1.1.0/src/bar-debug", "bui-toolbar/1.1.0/src/pagingbar-debug", "bui-toolbar/1.1.0/src/numberpagingbar-debug"], function(require, exports, module) {
   /**
    * @fileOverview 工具栏命名空间入口
    * @ignore
@@ -13,7 +13,7 @@ define("bui-toolbar/1.1.0/index-debug", ["bui-common/1.1.0/common-debug", "bui-t
   });
   module.exports = Toolbar;
 });
-define("bui-toolbar/1.1.0/src/baritem-debug", ["bui-common/1.1.0/common-debug"], function(require, exports, module) {
+define("bui-toolbar/1.1.0/src/baritem-debug", ["jquery/1.9.1/jquery-debug", "bui-common/1.1.0/common-debug"], function(require, exports, module) {
   /**
    * @fileOverview buttons or controls of toolbar
    * @author dxq613@gmail.com, yiminghe@gmail.com
@@ -24,7 +24,8 @@ define("bui-toolbar/1.1.0/src/baritem-debug", ["bui-common/1.1.0/common-debug"],
    * @namespace 工具栏命名空间
    * @ignore
    */
-  var BUI = require("bui-common/1.1.0/common-debug"),
+  var $ = require("jquery/1.9.1/jquery-debug"),
+    BUI = require("bui-common/1.1.0/common-debug"),
     PREFIX = BUI.prefix,
     Component = BUI.Component,
     UIBase = Component.UIBase;
@@ -236,13 +237,14 @@ define("bui-toolbar/1.1.0/src/baritem-debug", ["bui-common/1.1.0/common-debug"],
   };
   module.exports = BarItem;
 });
-define("bui-toolbar/1.1.0/src/bar-debug", ["bui-common/1.1.0/common-debug"], function(require, exports, module) {
+define("bui-toolbar/1.1.0/src/bar-debug", ["jquery/1.9.1/jquery-debug", "bui-common/1.1.0/common-debug"], function(require, exports, module) {
   /**
    * @fileOverview A collection of commonly used function buttons or controls represented in compact visual form.
    * @author dxq613@gmail.com, yiminghe@gmail.com
    * @ignore
    */
-  var BUI = require("bui-common/1.1.0/common-debug"),
+  var $ = require("jquery/1.9.1/jquery-debug"),
+    BUI = require("bui-common/1.1.0/common-debug"),
     Component = BUI.Component,
     UIBase = Component.UIBase;
   /**
@@ -332,13 +334,14 @@ define("bui-toolbar/1.1.0/src/bar-debug", ["bui-common/1.1.0/common-debug"], fun
   });
   module.exports = Bar;
 });
-define("bui-toolbar/1.1.0/src/pagingbar-debug", ["bui-common/1.1.0/common-debug", "bui-toolbar/1.1.0/src/bar-debug"], function(require, exports, module) {
+define("bui-toolbar/1.1.0/src/pagingbar-debug", ["jquery/1.9.1/jquery-debug", "bui-common/1.1.0/common-debug", "bui-toolbar/1.1.0/src/bar-debug"], function(require, exports, module) {
   /**
    * @fileOverview  a specialized toolbar that is bound to a Grid.Store and provides automatic paging control.
    * @author dxq613@gmail.com, yiminghe@gmail.com
    * @ignore
    */
-  var BUI = require("bui-common/1.1.0/common-debug"),
+  var $ = require("jquery/1.9.1/jquery-debug"),
+    BUI = require("bui-common/1.1.0/common-debug"),
     Bar = require("bui-toolbar/1.1.0/src/bar-debug"),
     Component = BUI.Component,
     Bindable = Component.UIBase.Bindable;
@@ -809,13 +812,14 @@ define("bui-toolbar/1.1.0/src/pagingbar-debug", ["bui-common/1.1.0/common-debug"
   });
   module.exports = PagingBar;
 });
-define("bui-toolbar/1.1.0/src/numberpagingbar-debug", ["bui-common/1.1.0/common-debug", "bui-toolbar/1.1.0/src/pagingbar-debug", "bui-toolbar/1.1.0/src/bar-debug"], function(require, exports, module) {
+define("bui-toolbar/1.1.0/src/numberpagingbar-debug", ["jquery/1.9.1/jquery-debug", "bui-common/1.1.0/common-debug", "bui-toolbar/1.1.0/src/pagingbar-debug", "bui-toolbar/1.1.0/src/bar-debug"], function(require, exports, module) {
   /**
    * @fileOverview  a specialized toolbar that is bound to a Grid.Store and provides automatic paging control.
    * @author
    * @ignore
    */
-  var BUI = require("bui-common/1.1.0/common-debug"),
+  var $ = require("jquery/1.9.1/jquery-debug"),
+    BUI = require("bui-common/1.1.0/common-debug"),
     Component = BUI.Component,
     PBar = require("bui-toolbar/1.1.0/src/pagingbar-debug");
   var PREFIX = BUI.prefix,
