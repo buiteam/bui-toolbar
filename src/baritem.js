@@ -9,7 +9,8 @@
  * @namespace 工具栏命名空间
  * @ignore
  */
-var BUI = require('bui-common'),
+var $ = require('jquery'),
+  BUI = require('bui-common'),
   PREFIX = BUI.prefix,
   Component = BUI.Component,
   UIBase = Component.UIBase;
