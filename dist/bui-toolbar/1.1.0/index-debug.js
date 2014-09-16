@@ -1,4 +1,4 @@
-define("bui-toolbar/1.1.0/index-debug", ["jquery", "bui-common/1.1.0/common-debug", "bui-toolbar/1.1.0/src/baritem-debug", "bui-toolbar/1.1.0/src/bar-debug", "bui-toolbar/1.1.0/src/pagingbar-debug", "bui-toolbar/1.1.0/src/numberpagingbar-debug"], function(require, exports, module) {
+define("bui-toolbar/1.1.0/index-debug", ["bui-common/1.1.0/common-debug", "jquery"], function(require, exports, module) {
   /**
    * @fileOverview 工具栏命名空间入口
    * @ignore
@@ -24,7 +24,7 @@ define("bui-toolbar/1.1.0/src/baritem-debug", ["jquery", "bui-common/1.1.0/commo
    * @namespace 工具栏命名空间
    * @ignore
    */
-  var $ = require("jquery"),
+  var $ = require('jquery'),
     BUI = require("bui-common/1.1.0/common-debug"),
     PREFIX = BUI.prefix,
     Component = BUI.Component,
@@ -243,7 +243,7 @@ define("bui-toolbar/1.1.0/src/bar-debug", ["jquery", "bui-common/1.1.0/common-de
    * @author dxq613@gmail.com, yiminghe@gmail.com
    * @ignore
    */
-  var $ = require("jquery"),
+  var $ = require('jquery'),
     BUI = require("bui-common/1.1.0/common-debug"),
     Component = BUI.Component,
     UIBase = Component.UIBase;
@@ -334,13 +334,13 @@ define("bui-toolbar/1.1.0/src/bar-debug", ["jquery", "bui-common/1.1.0/common-de
   });
   module.exports = Bar;
 });
-define("bui-toolbar/1.1.0/src/pagingbar-debug", ["jquery", "bui-common/1.1.0/common-debug", "bui-toolbar/1.1.0/src/bar-debug"], function(require, exports, module) {
+define("bui-toolbar/1.1.0/src/pagingbar-debug", ["jquery", "bui-common/1.1.0/common-debug"], function(require, exports, module) {
   /**
    * @fileOverview  a specialized toolbar that is bound to a Grid.Store and provides automatic paging control.
    * @author dxq613@gmail.com, yiminghe@gmail.com
    * @ignore
    */
-  var $ = require("jquery"),
+  var $ = require('jquery'),
     BUI = require("bui-common/1.1.0/common-debug"),
     Bar = require("bui-toolbar/1.1.0/src/bar-debug"),
     Component = BUI.Component,
@@ -812,13 +812,13 @@ define("bui-toolbar/1.1.0/src/pagingbar-debug", ["jquery", "bui-common/1.1.0/com
   });
   module.exports = PagingBar;
 });
-define("bui-toolbar/1.1.0/src/numberpagingbar-debug", ["jquery", "bui-common/1.1.0/common-debug", "bui-toolbar/1.1.0/src/pagingbar-debug", "bui-toolbar/1.1.0/src/bar-debug"], function(require, exports, module) {
+define("bui-toolbar/1.1.0/src/numberpagingbar-debug", ["jquery", "bui-common/1.1.0/common-debug"], function(require, exports, module) {
   /**
    * @fileOverview  a specialized toolbar that is bound to a Grid.Store and provides automatic paging control.
    * @author
    * @ignore
    */
-  var $ = require("jquery"),
+  var $ = require('jquery'),
     BUI = require("bui-common/1.1.0/common-debug"),
     Component = BUI.Component,
     PBar = require("bui-toolbar/1.1.0/src/pagingbar-debug");
@@ -867,7 +867,7 @@ define("bui-toolbar/1.1.0/src/numberpagingbar-debug", ["jquery", "bui-common/1.1
     _bindButtonEvent: function() {
       var _self = this,
         cls = _self.get('numberButtonCls');
-      _self.constructor.superclass._bindButtonEvent.call(this);
+      NumberPagingBar.superclass._bindButtonEvent.call(this);
       _self.get('el').delegate('a', 'click', function(ev) {
         ev.preventDefault();
       });

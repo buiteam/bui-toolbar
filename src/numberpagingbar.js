@@ -58,7 +58,7 @@ var NumberPagingBar = PBar.extend(
     _bindButtonEvent : function(){
         var _self = this,
             cls = _self.get('numberButtonCls');
-        _self.constructor.superclass._bindButtonEvent.call(this);
+        NumberPagingBar.superclass._bindButtonEvent.call(this);
         _self.get('el').delegate('a','click',function(ev){
           ev.preventDefault();
         });
